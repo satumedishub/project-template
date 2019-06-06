@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://bayudwiyansatria.github.io/Development-And-Operations/">
-        <img src="https://cdn.bayudwiyansatria.com/assets/logo-full.png" />
+        <img src="https://cdn.bayudwiyansatria.com/assets/logo-full.png" widht="1200px"/>
     </a>
     <br>
     <strong>Master Degree's Library Electronics Engineering Polytechnic Institute of Surabaya</strong>
