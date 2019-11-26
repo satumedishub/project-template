@@ -27,6 +27,12 @@
 
 # Development and Operation
 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+
+![Github Actions](https://github.com/bayudwiyansatria/Development-And-Operations/workflows/Github%20Action/badge.svg)
+
+Global Template Repository for Development and Operations Of Your Projects.
+
 | Key|Values|
 | ------| ----- |
 | Author| Bayu Dwiyan Satria |
