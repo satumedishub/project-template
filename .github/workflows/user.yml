@@ -1,11 +1,9 @@
-name: Github Action
+name: User Action
 
 on:
-  pull_request:
+  push:
     branches:
-      - master
-  schedule:
-    - cron: '0 0 * * 0'
+      - users/*
 jobs:
   build:
     name: Main
@@ -21,6 +19,3 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java-version }}
-      - name: RUN
-        run: |
-          echo HELLO WORLD
