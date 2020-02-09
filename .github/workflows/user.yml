@@ -21,11 +21,11 @@ jobs:
             goos: [darwin]
         exclude:
           - os: ubuntu-latest
-            goos: [darwin, windows]
+            goos: [darwin]
           - os: windows-latest
-            goos: [linux, darwin]
+            goos: [linux]
           - os: macos-latest
-            goos: [linux, windows]
+            goos: [windows]
           
     runs-on: ${{ matrix.os }}
     steps:
