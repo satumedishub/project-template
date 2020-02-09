@@ -10,14 +10,23 @@ jobs:
     strategy:
       matrix:
         java-version: [1.7, 1.8]
-        goos: [linux, darwin]
+        goos: [linux, windows, darwin]
         os: [ubuntu-latest, windows-latest, macos-latest]
         include:
           - os: ubuntu-latest
-            goos: linux
-        exclude:
+            goos: [linux]
+          - os: windows-latest
+            goos: [windows]
           - os: macos-latest
-            goos: darwin
+            goos: [darwin]
+        exclude:
+          - os: ubuntu-latest
+            goos: [darwin, windows]
+          - os: windows-latest
+            goos: [linux, darwin]
+          - os: macos-latest
+            goos: [linux, windows]
+          
     runs-on: ${{ matrix.os }}
     steps:
       # Installing Matrix OS Dependencies
