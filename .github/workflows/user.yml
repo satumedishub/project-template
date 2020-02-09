@@ -51,14 +51,7 @@ jobs:
     strategy:
       matrix:
         java-version: [1.8]
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        include:
-          - os: ubuntu-latest
-          - os: windows-lastest
-          - os: macos-latest
-        exclude:
-          - os: windows-latest
-            java-version: 1.8
+        os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Test Environment
