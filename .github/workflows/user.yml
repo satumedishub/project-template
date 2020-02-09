@@ -10,22 +10,7 @@ jobs:
     strategy:
       matrix:
         java-version: [1.7, 1.8]
-        goos: [linux, windows, darwin]
         os: [ubuntu-latest, windows-latest, macos-latest]
-        include:
-          - os: ubuntu-latest
-            goos: [linux]
-          - os: windows-latest
-            goos: [windows]
-          - os: macos-latest
-            goos: [darwin]
-        exclude:
-          - os: ubuntu-latest
-            goos: [darwin]
-          - os: windows-latest
-            goos: [linux]
-          - os: macos-latest
-            goos: [windows]
           
     runs-on: ${{ matrix.os }}
     steps:
