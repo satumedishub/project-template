@@ -6,15 +6,36 @@ on:
 jobs:
   build:
     name: Main
-    runs-on: ${{ matrix.os }}
     strategy:
-        matrix:
-          java-version: [1.7,1.8]
-          os: [ubuntu-latest]
+      matrix:
+        java-version: [1.8]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+          - os: windows-lastest
+          - os: macos-latest
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: Prepare
+      # Installing Matrix OS Dependencies
+      - name: Install dependencies ${{ matrix.os }}
+        run: sudo apt-get update
+        if: matrix.os == 'ubuntu-latest'
+      - name: Install dependencies ${{ matrix.os }}
+        run: choco install ninja
+        if: matrix.os == 'windows-latest'
+      - name: Install dependencies ${{ matrix.os }}
+        run: choco install ninja
+        if: matrix.os == 'macos-latest'
+      # Get Sources
+      - name: Checkout ${{ build.name }}
         uses: actions/checkout@v1
-      - name: Set Up Java Development Kit
+      # Setup Environment
+      - name: Setup java version $ {{ matrix.java-version }} 
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java-version }}
+      # Runner
+      - name: RUN
+        run: |
+          echo HELLO WORLD
+
