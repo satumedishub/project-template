@@ -1,5 +1,4 @@
 name: User Action
-
 on:
   push:
     branches:
@@ -19,7 +18,6 @@ jobs:
         exclude:
           - os: windows-latest
             java-version: 1.8
-
     runs-on: ${{ matrix.os }}
     steps:
       # Installing Matrix OS Dependencies
