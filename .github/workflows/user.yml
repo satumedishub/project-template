@@ -26,12 +26,12 @@ jobs:
         run: sudo apt-get update
       - name: Install dependencies ${{ matrix.os }}
         if: matrix.os == 'windows-latest'
-        run: choco install ninja
+        run: choco install git
       - name: Install dependencies ${{ matrix.os }}
         if: matrix.os == 'macos-latest'
-        run: choco install ninja
+        run: brew install git
       # Get Sources
-      - name: Checkout ${{ build.name }}
+      - name: Checkout sources control
         uses: actions/checkout@v1
       # Setup Environment
       - name: Setup java version $ {{ matrix.java-version }} 
