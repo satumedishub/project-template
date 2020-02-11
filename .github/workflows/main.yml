@@ -7,22 +7,16 @@ on:
   # Scheduling Action
   schedule:
     - cron: '0 0 * * 0'
+      
 jobs:
   # Build
   build:
     name: Build
     strategy:
       matrix:
-        java-version: [1.8]
+        java-version: [1.7, 1.8]
         os: [ubuntu-latest, windows-latest, macos-latest]
-        include:
-          - os: ubuntu-latest
-          - os: windows-lastest
-          - os: macos-latest
-        exclude:
-          - os: windows-latest
-            java-version: 1.8
-
+          
     runs-on: ${{ matrix.os }}
     steps:
       # Installing Matrix OS Dependencies
@@ -31,18 +25,20 @@ jobs:
         run: sudo apt-get update
       - name: Install dependencies ${{ matrix.os }}
         if: matrix.os == 'windows-latest'
-        run: choco install ninja
+        run: choco install git
       - name: Install dependencies ${{ matrix.os }}
         if: matrix.os == 'macos-latest'
-        run: choco install ninja
+        run: brew install git
       # Get Sources
-      - name: Checkout source version
+      - name: Checkout sources control
         uses: actions/checkout@v1
       # Setup Environment
       - name: Setup java version $ {{ matrix.java-version }} 
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java-version }}
+          java-package: jdk
+          architecture: x64
       # Runner
       - name: Running Environment
         run: |
@@ -51,12 +47,8 @@ jobs:
   deploy:
     name: Deploying
     needs: build
-    strategy:
-      matrix:
-        java-version: [1.8]
-        os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Test Environment
-        run : |
+      - name: Running Environment
+        run: |
           java -version
