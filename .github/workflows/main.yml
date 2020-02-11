@@ -51,5 +51,12 @@ jobs:
   deploy:
     name: Deploying
     needs: build
+    strategy:
+      matrix:
+        java-version: [1.8]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
-          
+    steps:
+      - name: Test Environment
+        run : |
+          java -version
