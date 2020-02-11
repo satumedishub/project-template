@@ -1,41 +1,53 @@
 name: Java Action
 on:
-  pull_request:
+  push:
     branches:
-      - master
+      - users/*
 jobs:
+  # Build
   build:
-    name: Main
+    name: Build
     strategy:
       matrix:
-        java-version: [1.8]
+        java-version: [1.7, 1.8]
         os: [ubuntu-latest, windows-latest, macos-latest]
-        include:
-          - os: ubuntu-latest
-          - os: windows-lastest
-          - os: macos-latest
+          
     runs-on: ${{ matrix.os }}
     steps:
       # Installing Matrix OS Dependencies
       - name: Install dependencies ${{ matrix.os }}
-        run: sudo apt-get update
         if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get update
       - name: Install dependencies ${{ matrix.os }}
-        run: choco install ninja
         if: matrix.os == 'windows-latest'
+        run: choco install git
       - name: Install dependencies ${{ matrix.os }}
-        run: choco install ninja
         if: matrix.os == 'macos-latest'
+        run: brew install git
       # Get Sources
-      - name: Checkout ${{ build.name }}
+      - name: Checkout sources control
         uses: actions/checkout@v1
       # Setup Environment
       - name: Setup java version $ {{ matrix.java-version }} 
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java-version }}
+          java-package: jdk
+          architecture: x64
       # Runner
-      - name: RUN
+      - name: Running Environment
         run: |
-          echo HELLO WORLD
-
+          java -version
+  # Deployment
+  deploy:
+    name: Deploying
+    needs: build
+    strategy:
+      matrix:
+        java-version: [1.8]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Test Environment
+        run : |
+          echo ${{ matrix.os }}
