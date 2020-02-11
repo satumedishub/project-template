@@ -36,7 +36,7 @@ jobs:
         if: matrix.os == 'macos-latest'
         run: choco install ninja
       # Get Sources
-      - name: Checkout ${{ build.name }}
+      - name: Checkout source version
         uses: actions/checkout@v1
       # Setup Environment
       - name: Setup java version $ {{ matrix.java-version }} 
