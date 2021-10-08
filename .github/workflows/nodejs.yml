@@ -2,7 +2,7 @@ name: Node JS Action
 on:
   pull_request:
     branches:
-      - master
+    - master
 jobs:
   build:
     name: Main
@@ -12,9 +12,9 @@ jobs:
           node-version: [10]
           os: [ubuntu-latest]
     steps:
-      - name: Prepare
-        uses: actions/checkout@v1
-      - name: Set Up Node JS
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.java-version }}
+    - name: Prepare
+      uses: actions/checkout@v1
+    - name: Set Up Node JS
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.java-version }}
