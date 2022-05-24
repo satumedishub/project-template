@@ -1,6 +1,6 @@
 <p align="center">
-<a href="https://bayudwiyansatria.github.io/Development-And-Operations/">
-<img src="https://cdn.bayudwiyansatria.com/assets/logo-full.png" width="100%" />
+<a href="https://github.com/satumedishub/project-template">
+<img src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/docker-icon.svg" width="30%" />
 </a>
 <br>
 </p>
@@ -8,37 +8,36 @@
 <a href="#">
 <img src="https://img.shields.io/badge/%20Platforms-Windows%20/%20Linux-blue.svg?style=flat-square" alt="Platforms" />
 </a>
-<a href="https://bayudwiyansatria.github.io/Development-And-Operations/blob/master/LICENSE">
+<a href="https://github.com/satumedishub/project-template/blob/master/LICENSE">
 <img src="https://img.shields.io/badge/%20Licence-MIT-green.svg?style=flat-square" alt="license" />
 </a>
 </p>
 <p align="center">
-<a href="https://github.com/bayudwiyansatria/Development-And-Operations/blob/master/CODE_OF_CONDUCT.md">
+<a href="https://github.com/satumedishub/project-template/blob/master/CODE_OF_CONDUCT.md">
 <img src="https://img.shields.io/badge/Community-Code%20of%20Conduct-orange.svg?style=flat-squre" alt="Code of Conduct" />
 </a>
-<a href="https://github.com/bayudwiyansatria/Development-And-Operations/blob/master/SUPPORT.md">
+<a href="https://github.com/satumedishub/project-template/blob/master/SUPPORT.md">
 <img src="https://img.shields.io/badge/Community-Support-red.svg?style=flat-square" alt="Support" />
 </a>
-<a href="https://github.com/bayudwiyansatria/Development-And-Operations/blob/master/CONTRIBUTING.md">
+<a href="https://github.com/satumedishub/project-template/blob/master/CONTRIBUTING.md">
 <img src="https://img.shields.io/badge/%20Community-Contribution-yellow.svg?style=flat-square" alt="Contribution" />
 </a>
 </p>
 <hr>
 
-# Development and Operation
+# Go API Service
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
-![Github Actions](https://github.com/bayudwiyansatria/Development-And-Operations/workflows/Github%20Action/badge.svg)
+![Github Actions](https://github.com/satumedishub/project-template/workflows/Github%20Action/badge.svg)
 
-Global Template Repository for Development and Operations Of Your Projects.
+Global Template Repository for any new project created in [SatuMedis](https://satumedis.com/).
 
-| Key|Values|
-| ------| ----- |
-| Author| Bayu Dwiyan Satria |
-| Email | bayudwiyansatria@gmail.com |
-| Phone | +62-823-9602-9583 |
-| Website | [https://bayudwiyansatria.com](https://bayudwiyansatria.com) |
+| Key      | Values                                                                                  |
+|----------|-----------------------------------------------------------------------------------------|
+| Author   | Muhammad Febrian Ardiansyah                                                             |
+| Email    | ardi@satumedis.com                                                                      |
+| LinkedIn | [Muhammad Febrian Ardiansyah](https://www.linkedin.com/in/muhammad-febrian-ardiansyah/) |
 
 ## Table of Contents
 
@@ -49,6 +48,7 @@ Global Template Repository for Development and Operations Of Your Projects.
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
+* [Misc](#misc)
 
 ## Getting Started
 
@@ -70,13 +70,20 @@ yum -y install git
 
 ### Installation
 
-A step by step series of examples that tell you how to get a development env running
+- Clone the project
+  ```shell
+  git clone git@github.com:satumedishub/project-template.git
+  ```
 
-Say what the step will be clone this repository.
-
-```shell
-git clone git@github.com:bayudwiyansatria/Development-And-Operations.git
-```
+- initialize go module (creating `go.mod`): 
+  ```shell
+  go mod init github.com/satumedishub/project-template
+  ```
+- add module requirements and sums:
+  ```shell
+  go mod tidy
+  ```
+- 
 
 ## Development
 
@@ -94,28 +101,31 @@ Please make sure to update tests as appropriate.
 
 Looking to contribute to our code but need some help? There's a few ways to get information:
 
-* Connect with us on [Twitter](https://twitter.com/bayudsatria)
-* Like us on [Facebook](https://facebook.com/PBayuDSatria)
-* Follow us on [LinkedIn](https://linkedin.com/in/bayudwiyansatria)
-* Subscribe us on [Youtube](https://youtube.com/channel/UCihxWj1rtheK73mGdrf0OiA)
+* Connect with me on [Twitter](https://twitter.com/ardikucing)
+* Connect with me on [Facebook](https://facebook.com/ardihikaru)
+* Connect with me on [LinkedIn](https://linkedin.com/in/muhammad-febrian-ardiansyah)
 * Log an issue here on github
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/bayudwiyansatria/Development-And-Operations/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/satumedishub/project-template/tags).
 
 ## Authors
 
-* **[Bayu Dwiyan Satria](https://github.com/bayudwiyansatria)** - *Initial work*
+* **[Muhammad Febrian Ardiansyah](https://github.com/ardihikaru)** - *Initial work*
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-<p> Copyright &copy; 2017 - 2019 Public Use. All Rights Reserved.
+## Misc
+
+- // TODO
 
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+
+<p> Copyright &copy; 2017 - 2022 Public Use. All Rights Reserved.

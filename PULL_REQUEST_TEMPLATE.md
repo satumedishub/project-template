@@ -17,13 +17,13 @@ Explain here the changes you made on the PR. Please explain the WHAT: patterns u
 ## Why is it important?
 
 <!-- Mandatory
-Explain here the WHY, or the rationale/motivation for the changes.
+Explain here the WHY or the rationale/motivation for the changes.
 -->
 
 ## Checklist
 
 <!-- Mandatory
-Add a checklist of things that are required to be reviewed in order to have the PR approved
+Add a checklist of things that need to be reviewed to approve the PR.
 
 List here all the items you have verified BEFORE sending this PR. Please DO NOT remove any item, striking through those that do not apply. (Just in case, strikethrough uses two tildes. ~~Scratch this.~~)
 -->
@@ -51,19 +51,18 @@ Explain here how this PR will be tested by the reviewer: commands, dependencies,
 ## Related issues
 
 <!-- Recommended
-Link related issues below. Insert the issue link or reference after the word "Closes" if merging this should automatically close it.
+Explain here how the reviewer will test this PR: commands, dependencies, steps, etc.
 
 - Closes #123
 - Relates #123
 - Requires #123
 - Superseds #123
 -->
-- 
 
 ## Use cases
 
 <!-- Recommended
-Explain here the different behaviors that this PR introduces or modifies in this project, user roles, environment configuration, etc.
+Explain the different behaviors that this PR introduces or modifies in this project, user roles, environment configuration, etc.
 
 If you are familiar with Gherkin test scenarios, we recommend its usage: https://cucumber.io/docs/gherkin/reference/
 -->
@@ -71,11 +70,11 @@ If you are familiar with Gherkin test scenarios, we recommend its usage: https:/
 ## Screenshots
 
 <!-- Optional
-Add here screenshots about how the project will be changed after the PR is applied. They could be related to web pages, terminal, etc, or any other image you consider important to be shared with the team.
+Add screenshots about the new changes in the project after the PR is applied. They could be related to web pages, terminals, etc., or any other image you consider essential to be shared with the team.
 -->
 
 ## Logs
 
 <!-- Recommended
-Paste here output logs discovered while creating this PR, such as stack traces or integration logs, or any other output you consider important to be shared with the team.
+Paste here output logs discovered while creating this PR, such as stack traces or integration logs, or any other output you consider essential to be shared with the team.
 -->
