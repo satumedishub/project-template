@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://github.com/satumedishub/project-template">
+<a href="https://github.com/satumedishub/octopus-api-service">
 <img src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/docker-icon.svg" width="30%" />
 </a>
 <br>
@@ -8,36 +8,40 @@
 <a href="#">
 <img src="https://img.shields.io/badge/%20Platforms-Windows%20/%20Linux-blue.svg?style=flat-square" alt="Platforms" />
 </a>
-<a href="https://github.com/satumedishub/project-template/blob/master/LICENSE">
+<a href="https://github.com/satumedishub/octopus-api-service/blob/master/LICENSE">
 <img src="https://img.shields.io/badge/%20Licence-MIT-green.svg?style=flat-square" alt="license" />
 </a>
 </p>
 <p align="center">
-<a href="https://github.com/satumedishub/project-template/blob/master/CODE_OF_CONDUCT.md">
+<a href="https://github.com/satumedishub/octopus-api-service/blob/master/CODE_OF_CONDUCT.md">
 <img src="https://img.shields.io/badge/Community-Code%20of%20Conduct-orange.svg?style=flat-squre" alt="Code of Conduct" />
 </a>
-<a href="https://github.com/satumedishub/project-template/blob/master/SUPPORT.md">
+<a href="https://github.com/satumedishub/octopus-api-service/blob/master/SUPPORT.md">
 <img src="https://img.shields.io/badge/Community-Support-red.svg?style=flat-square" alt="Support" />
 </a>
-<a href="https://github.com/satumedishub/project-template/blob/master/CONTRIBUTING.md">
+<a href="https://github.com/satumedishub/octopus-api-service/blob/master/CONTRIBUTING.md">
 <img src="https://img.shields.io/badge/%20Community-Contribution-yellow.svg?style=flat-square" alt="Contribution" />
 </a>
 </p>
 <hr>
 
-# Go API Service
+# Octopus API Service
+
+Octopus API Service is a service designed to serve one of the SatuMedis's internal system
+which is related to the Clinic system (e.g. *add new Clinic*).
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
-![Github Actions](https://github.com/satumedishub/project-template/workflows/Github%20Action/badge.svg)
+![Github Actions](https://github.com/satumedishub/octopus-api-service/workflows/Github%20Action/badge.svg)
 
-Global Template Repository for any new project created in [SatuMedis](https://satumedis.com/).
+Some important links related to this project:
 
-| Key      | Values                                                                                  |
-|----------|-----------------------------------------------------------------------------------------|
-| Author   | Muhammad Febrian Ardiansyah                                                             |
-| Email    | ardi@satumedis.com                                                                      |
-| LinkedIn | [Muhammad Febrian Ardiansyah](https://www.linkedin.com/in/muhammad-febrian-ardiansyah/) |
+| Key              | Values                                                                                                                                                      |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Frontend Service | [Link to the GITHUB repo](https://github.com/satumedishub/octopus-webapp)                                                                                   |
+| Swagger API Link | *TO BE ADDED*                                                                                                                                               |
+| API Spec         | [Link to the initial API spec](https://www.notion.so/satumedis/Internal-Web-App-API-Spec-f6ed8061ad9a4b3bab974de1eaa6f832#c63172661a66453aa291a1cc7469d01d) |
+| Task Management  | [Link to the GITHUB task management](https://github.com/orgs/satumedishub/projects/1/views/1)                                                               |
 
 ## Table of Contents
 
@@ -46,52 +50,65 @@ Global Template Repository for any new project created in [SatuMedis](https://sa
 * [Installation](#installation)
 * [Development](#development)
 * [Usage](#usage)
+* [Configurations](#configurations)
 * [Contributing](#contributing)
 * [License](#license)
 * [Misc](#misc)
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing
+purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+* `Git` installation (**Dude, please...**)
+    * Run this command:
+      ```shell
+      apt-get -y install git
+      ```
+      Or
+      ```shell
+      yum -y install git
+      ```
 
-```shell
-apt-get -y install git
-```
-
-Or
-
-```shell
-yum -y install git
-```
+* `golang-ci` is one of the **IMPORTANT** packages. Any developer who will maintain this project should install it. The
+  installation command is as follows:
+    ```shell
+    go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.46.2
+    ```
+* Everytime the code is updated, please run following command:
+  ```shell
+  golangci-lint run ./...
+  ```
+    * Whenever you get **RED colored logs**, means that **YOU ARE ABSOLUTELY** need to fix that before finalize your
+      work (e.g. *Make a PR*)
+        * An example of an error log:
+          ```shell
+          pkg/router/handlers/user.go:19:6: `xxx` is unused (deadcode)
+          type xxx struct {
+               ^
+          ```
+    * The only log that can be ignored is the `WARN`, such as:
+      ```shell
+      WARN [linters context] structcheck is disabled because of go1.18. You can track the evolution of the go1.18 support by following the https://github.com/golangci/golangci-lint/issues/2649.
+      ```
 
 ### Installation
 
-- Clone the project
-  ```shell
-  git clone git@github.com:satumedishub/project-template.git
-  ```
-
-- initialize go module (creating `go.mod`): 
-  ```shell
-  go mod init github.com/satumedishub/project-template
-  ```
-- add module requirements and sums:
-  ```shell
-  go mod tidy
-  ```
-- 
+* TO BE ADDED
 
 ## Development
 
--*Release 1.0* : **2019, Nov**.
+-*Release 1.0* : **Not Available Yet**.
 
 ## Usage
 
-Reference and programming instructional materials.
+* TO BE ADDED
+
+## Configurations
+
+* TO BE ADDED
 
 ## Contributing
 
@@ -101,18 +118,20 @@ Please make sure to update tests as appropriate.
 
 Looking to contribute to our code but need some help? There's a few ways to get information:
 
-* Connect with me on [Twitter](https://twitter.com/ardikucing)
-* Connect with me on [Facebook](https://facebook.com/ardihikaru)
-* Connect with me on [LinkedIn](https://linkedin.com/in/muhammad-febrian-ardiansyah)
-* Log an issue here on github
+* Connect with me on [Twitter](https://twitter.com/satumedis)
+* Connect with me on [Facebook](https://www.facebook.com/profile.php?id=100073637499682)
+* Connect with me on [LinkedIn](https://www.linkedin.com/company/76233667)
+* Log an issue here on GitHub
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/satumedishub/project-template/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see
+the [tags on this repository](https://github.com/satumedishub/octopus-api-service/tags).
 
 ## Authors
 
-* **[Muhammad Febrian Ardiansyah](https://github.com/ardihikaru)** - *Initial work*
+* **[Muhammad Febrian Ardiansyah](https://github.com/ardihikaru)**
+* ADD MORE HERE ...
 
 ## License
 
@@ -120,12 +139,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Misc
 
-- // TODO
+* [Golang CI Lint](https://golangci-lint.run/usage/install/)
+    * Installation command:
+      ```
+        go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.46.2
+      ```
+    * Usage: `golangci-lint run <folderName>`
+        * Example 1: `golangci-lint run cmd/...`
+        * Example 2: `golangci-lint run pkg/...`
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-<p> Copyright &copy; 2017 - 2022 Public Use. All Rights Reserved.
+<p> Copyright &copy; 2022 Private use in within the SatuMedis Development Team. All Rights Reserved.</p>
