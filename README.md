@@ -25,23 +25,13 @@
 </p>
 <hr>
 
-# Octopus API Service
+# Project Template
 
-Octopus API Service is a service designed to serve one of the SatuMedis's internal system
-which is related to the Clinic system (e.g. *add new Clinic*).
+Please add project description here.
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 ![Github Actions](https://github.com/satumedishub/octopus-api-service/workflows/Github%20Action/badge.svg)
-
-Some important links related to this project:
-
-| Key              | Values                                                                                                                                                      |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Frontend Service | [Link to the GITHUB repo](https://github.com/satumedishub/octopus-webapp)                                                                                   |
-| Swagger API Link | *TO BE ADDED*                                                                                                                                               |
-| API Spec         | [Link to the initial API spec](https://www.notion.so/satumedis/Internal-Web-App-API-Spec-f6ed8061ad9a4b3bab974de1eaa6f832#c63172661a66453aa291a1cc7469d01d) |
-| Task Management  | [Link to the GITHUB task management](https://github.com/orgs/satumedishub/projects/1/views/1)                                                               |
 
 ## Table of Contents
 
@@ -100,7 +90,7 @@ purposes. See deployment for notes on how to deploy the project on a live system
 
 ## Development
 
--*Release 1.0* : **Not Available Yet**.
+* *Release 1.0* : **Not Available Yet**.
 
 ## Usage
 
